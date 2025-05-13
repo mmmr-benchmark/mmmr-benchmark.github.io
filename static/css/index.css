@@ -119,6 +119,15 @@ body {
   overflow: hidden;
   padding: 20px;
   font-size: 0;
+  text-align: center;
+}
+
+.results-carousel .item img {
+  max-height: 400px;
+  width: auto;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .results-carousel video {
@@ -131,6 +140,151 @@ body {
 
 .eql-cntrb { 
   font-size: smaller;
+}
+
+/* 数据单元格和进度条样式 */
+.data-cell {
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+  padding: 12px 15px;
+}
+
+.progress-bar-1, .progress-bar-2, .progress-bar-3 {
+  position: absolute;
+  left: 15px;
+  top: 6px;
+  bottom: 6px;
+  border-radius: 6px;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+/* Baselines进度条 */
+.progress-bar-1 {
+  background-color: #b3e0e4 ;
+}
+
+/* Models without thinking进度条 */
+.progress-bar-2 {
+  background-color: #a8d5bd;
+}
+
+/* Models with thinking进度条 */
+.progress-bar-3 {
+  background-color: #ffeac2;
+}
+
+/* 数据值样式 */
+.cell-value {
+  position: relative; 
+  z-index: 1;
+}
+
+/* 粗体高亮数据 */
+.bold-value {
+  font-weight: bold;
+}
+
+/* 表格全局样式 */
+.table {
+  width: 100% !important;
+  table-layout: fixed; /* 确保列宽度一致 */
+}
+
+.table th,
+.table td {
+  text-align: center !important;
+  vertical-align: middle !important;
+  width: calc(100% / 9) !important; /* 将表格均分为9列 */
+  word-wrap: break-word; /* 长文本自动换行 */
+}
+
+/* 第一列可以稍宽一些，用于容纳模型名称 */
+.table th:first-child,
+.table td:first-child {
+  width: calc(100% / 9 * 2) !important;
+}
+
+/* 其他列相应减小一点宽度 */
+.table th:not(:first-child),
+.table td:not(:first-child) {
+  width: calc((100% - (100% / 9 * 2)) / 8) !important;
+}
+
+/* 强制所有单元格内容居中 */
+table.table th, 
+table.table td,
+table.table tr > th,
+table.table tr > td {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+/* 表头样式 */
+.table thead tr {
+  background-color: #b7cddc;
+  color: #ffffff;
+}
+
+.table thead th {
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 12px 15px;
+}
+
+/* 表格行悬停效果 - 最简化版本 */
+.table tbody tr:not(.group-1):not(.group-2):not(.group-3) {
+  transition: background-color 0.3s;
+}
+
+.table tbody tr:not(.group-1):not(.group-2):not(.group-3):hover {
+  background-color: #f0f0f0 !important;
+}
+
+/* 重置背景色 */
+.table tbody tr:not(.group-1):not(.group-2):not(.group-3):hover td,
+.table tbody tr:not(.group-1):not(.group-2):not(.group-3):hover td.model-1,
+.table tbody tr:not(.group-1):not(.group-2):not(.group-3):hover td.model-2,
+.table tbody tr:not(.group-1):not(.group-2):not(.group-3):hover td.model-3,
+.table tbody tr:not(.group-1):not(.group-2):not(.group-3):hover td.data-cell {
+  background-color: transparent !important;
+}
+
+/* Baselines 组模型名称样式 */
+.model-1 {
+  background-color: #e9fdff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Models without thinking 组模型名称样式 */
+.model-2 {
+  background-color: #e8f4eb;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Models with thinking 组模型名称样式 */
+.model-3 {
+  background-color: #fcfaee;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Baselines 组样式 */
+.group-1 {
+  background-color: #e9fdff;
+}
+
+/* Models without thinking 组样式 */
+.group-2 {
+  background-color: #e8f4eb;
+}
+
+/* Models with thinking 组样式 */
+.group-3 {
+  background-color: #fcfaee;
 }
 
 

@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>MMMR:Benchmarking Massive Multi-Modal Reasoning Tasks</title>
+  <link rel="icon" type="image/x-icon" href="static/images/MMMR_logo.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,7 +52,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title"><img src="static/images/MMMR_logo.ico" alt="MMMR Logo" style="width: 60px; height: auto; vertical-align: middle; margin-right: 15px;">MMMR</h1>
+            <h2 class="title is-3 is-normal publication-title" style="font-weight: normal;">Benchmarking Massive Multi-Modal Reasoning Tasks</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -127,28 +128,30 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="./static/images/overview.png" alt="">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Comparison of Accuracy Across Different Models and Methods on the MMMR Dataset.
+        The bar chart illustrates validation accuracy (in %) for baselines (Heuristic & Expert), MLLMs
+        without Thinking (e.g., LLaMA-3.2-11B), and MLLMs with Thinking (e.g., Gemini-2.5 Pro, Dual),
+        highlighting performance trends across six task types, with an average accuracy of 38.5% for MLLMs.
       </h2>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+<!-- Paper Introduction -->
+<section class="section ">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+      <div class="column is-10">
+        <h2 class="title is-3">
+          <img src="./static/images/intro.png" alt="" style="width: 60px; height: auto; vertical-align: middle; margin-right: 10px; display: inline-block;">
+          <span style="vertical-align: middle;">Introduction</span>
+        </h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Recent advancements in Multi-Modal Large Language Models (MLLMs) have driven the development of complex reasoning tasks integrating text, images, and structured data, spanning Logical Reasoning, Mathematical Reasoning, Spatio-Temporal Understanding, Coding, Map Navigation, and Scientific Reasoning. However, the reasoning capabilities of MLLMs, particularly those with Thinking (MLLMs-T), remain underexplored, lacking a standardized evaluation framework. We introduce \MMMR, a novel benchmarking framework designed to evaluate MLLMs-T and MLLMs through a three-stage pipeline: 1) Reasoning Dataset Construction, creating the \MMMR with diverse multi-modal tasks; 2) Thinking Quality Assessment, using metrics like RTQ, RTA, RSC, Acc, TLen, and OA to assess reasoning coherence and alignment; and 3) Insight Synthesis, deriving actionable strategies for improvement. Our evaluation on the \textbf{MMMR} reveals: 1) MLLMs-T outperform MLLMs in multi-modal reasoning, especially in tasks requiring modality integration; 2) Thinking quality assessment identifies prevalent errors like repetitive thinking and overthinking, guiding targeted enhancements; and 3) synthesized insights suggest improvements in reasoning coherence, multi-modal integration, and efficiency, addressing overthinking via optimized Thinking strategies. These findings provide a foundation for advancing MLLMs-T, and we advocate for further research to enhance scalability, robustness, and real-world applicability of multi-modal reasoning systems.
           </p>
         </div>
       </div>
@@ -158,120 +161,621 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- dataset -->
+<section class="hero is-light">
+  <div class="container">
+    <div class="has-text-centered" style="padding: 20px 0;">
+      <h2 class="title is-1">
+        <img src="./static/images/dataset.png" alt="" style="width: 70px; height: auto; vertical-align: middle; margin-right: 10px; display: inline-block;">
+        <span style="vertical-align: middle;">MMMR Dataset</span>
+        </h2>
+    </div>
+  </div>
+</section>
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <!-- dataset overview -->
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="content">
+            <p class="has-text-justified">
+              <b>MMMR</b> establishes a comprehensive <b>reasoning dataset MMMR</b> to evaluate the multi-modal reasoning capabilities of MLLMs-T. It encompasses <b>six</b> task types—Logical Reasoning, Mathematical Reasoning, Spatio-Temporal Understanding, Coding, Map Navigation, and Scientific Reasoning—incorporating subcategories such as deductive reasoning, algebraic problem-solving, temporal analysis, code generation, path planning, and scientific hypothesis testing. MMMR integrates diverse modalities, including textual descriptions, images, and structured data (e.g., tables, graphs), with a balanced distribution across difficulty levels. MMMR is partitioned into <b>validation</b> and <b>test</b> sets to ensure a thorough and reproducible assessment of model performance.
+            </p>
+          </div>
+          <div class="has-text-centered" style="margin: 30px 0;">
+            <img src="./static/images/data_overview.png" alt="Data Overview" style="max-width: 80%; height: auto;">
+            <h2 class="subtitle has-text-centered">
+              Dataset Presentation of MMMR, showcasing representative examples of multi-modal reasoning tasks. Each example highlights interleaved inputs, illustrating the dataset's complexity and diversity in evaluating unified reasoning capabilities.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!-- Image carousel -->
+      <h2 class="title is-3" style="text-align: center;">
+        <span style="vertical-align: middle;">Statistics</span>
+      </h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/data_summary.png" alt=""/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Data Summary.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/comparison.png" alt=""/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Comparison of representative multi-modal reasoning datasets. 
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/statistics.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+         Statistical overview of MMMRdataset.
        </h2>
      </div>
-     <div class="item">
+     <!-- <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
       </h2>
-    </div>
+    </div> --> 
   </div>
 </div>
 </div>
 </section>
 <!-- End image carousel -->
 
+<!-- Leaderboard -->
+<section class="hero is-light">
+  <div class="container">
+    <div class="has-text-centered" style="padding: 20px 0;">
+      <h2 class="title is-1">
+        <img src="./static/images/leaderboard.png" alt="" style="width: 70px; height: auto; vertical-align: middle; margin-right: 10px; display: inline-block;">
+        <span style="vertical-align: middle;">Leaderboard</span>
+      </h2>
+    </div>
+  </div>
+</section>
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="table-container">
+          <table class="table is-bordered is-fullwidth">
+            <thead>
+              <tr>
+                <th>Models</th>
+                <th>Validation (106)</th>
+                <th>Test (1083)</th>
+                <th>Logic (182)</th>
+                <th>Math (212)</th>
+                <th>Space-Time (200)</th>
+                <th>Code (141)</th>
+                <th>Map (150)</th>
+                <th>Science (198)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Baselines -->
+              <tr class="group-1">
+                <td colspan="9" class="has-text-weight-bold" style="text-align: center; vertical-align: middle;">Baselines</td>
+              </tr>
+              <tr>
+                <td class="model-1">Random Choice</td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 22.1%;"></div>
+                  <span class="cell-value">22.1</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 24.18%;"></div>
+                  <span class="cell-value">24.18</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 23.87%;"></div>
+                  <span class="cell-value">23.87</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 21.65%;"></div>
+                  <span class="cell-value">21.65</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 25.34%;"></div>
+                  <span class="cell-value">25.34</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 22.88%;"></div>
+                  <span class="cell-value">22.88</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 23.72%;"></div>
+                  <span class="cell-value">23.72</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-1">Frequent Choice</td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 26.8%;"></div>
+                  <span class="cell-value">26.8</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 26.73%;"></div>
+                  <span class="cell-value">26.73</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 26.35%;"></div>
+                  <span class="cell-value">26.35</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 24.08%;"></div>
+                  <span class="cell-value">24.08</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 24.47%;"></div>
+                  <span class="cell-value">24.47</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 25.27%;"></div>
+                  <span class="cell-value">25.27</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 29.84%;"></div>
+                  <span class="cell-value">29.84</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-1">Expert (Human only)</td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 29.23%;"></div>
+                  <span class="cell-value">29.23</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+              </tr>
+              <tr>
+                <td class="model-1">Expert (Human + GPT-4o)</td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 52.85%;"></div>
+                  <span class="cell-value bold-value">52.85</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+              </tr>
+              <!-- LLMs without thinking -->
+              <tr class="group-2">
+                <td colspan="9" class="has-text-weight-bold" style="text-align: center; vertical-align: middle;">Large Language Models without thinking</td>
+              </tr>
+              <tr>
+                <td class="model-2">LLaMA-3.2-11B-Vision-Instruct</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 18.00%;"></div>
+                  <span class="cell-value">18.00</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 18.10%;"></div>
+                  <span class="cell-value">18.10</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+              </tr>
+              <tr>
+                <td class="model-2">LLaMA-3.2-90B-Vision-Instruct</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+              </tr>
+              <tr>
+                <td class="model-2">Qwen2.5-VL-32B-Instruct</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 34.86%;"></div>
+                  <span class="cell-value">34.86</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 37.36%;"></div>
+                  <span class="cell-value">37.36</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 25.14%;"></div>
+                  <span class="cell-value">25.14</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 50.94%;"></div>
+                  <span class="cell-value">50.94</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 45.00%;"></div>
+                  <span class="cell-value">45.00</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 32.97%;"></div>
+                  <span class="cell-value">32.97</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 41.58%;"></div>
+                  <span class="cell-value">41.58</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 21.71%;"></div>
+                  <span class="cell-value">21.71</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-2">Qwen2.5-VL-72B-Instruct</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 36.95%;"></div>
+                  <span class="cell-value">36.95</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 37.17%;"></div>
+                  <span class="cell-value">37.17</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 24.04%;"></div>
+                  <span class="cell-value">24.04</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 52.36%;"></div>
+                  <span class="cell-value">52.36</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 47.50%;"></div>
+                  <span class="cell-value">47.50</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 41.76%;"></div>
+                  <span class="cell-value bold-value">41.76</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 42.57%;"></div>
+                  <span class="cell-value">42.57</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 31.31%;"></div>
+                  <span class="cell-value">31.31</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-2">Qwen-VL-max</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 35.13%;"></div>
+                  <span class="cell-value">35.13</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 35.54%;"></div>
+                  <span class="cell-value">35.54</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 24.18%;"></div>
+                  <span class="cell-value">24.18</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 54.72%;"></div>
+                  <span class="cell-value">54.72</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 14.90%;"></div>
+                  <span class="cell-value">14.90</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 28.28%;"></div>
+                  <span class="cell-value">28.28</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-2">Gemma-3-27B-IT</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 30.87%;"></div>
+                  <span class="cell-value">30.87</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 29.01%;"></div>
+                  <span class="cell-value">29.01</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 22.40%;"></div>
+                  <span class="cell-value">22.40</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 33.50%;"></div>
+                  <span class="cell-value">33.50</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 26.73%;"></div>
+                  <span class="cell-value">26.73</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 27.27%;"></div>
+                  <span class="cell-value">27.27</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-2">Gemini-1.5 Flash</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 32.18%;"></div>
+                  <span class="cell-value">32.18</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 29.61%;"></div>
+                  <span class="cell-value">29.61</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 28.57%;"></div>
+                  <span class="cell-value">28.57</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 43.40%;"></div>
+                  <span class="cell-value">43.40*</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 37.00%;"></div>
+                  <span class="cell-value">37.00</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 8.08%;"></div>
+                  <span class="cell-value">8.08</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 24.75%;"></div>
+                  <span class="cell-value">24.75</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 32.82%;"></div>
+                  <span class="cell-value">32.82</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-2">GPT-4 Vision</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 37.59%;"></div>
+                  <span class="cell-value">37.59</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 38.05%;"></div>
+                  <span class="cell-value">38.05</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 35.85%;"></div>
+                  <span class="cell-value">35.85</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 49.00%;"></div>
+                  <span class="cell-value">49.00</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 8.51%;"></div>
+                  <span class="cell-value">8.51</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 41.91%;"></div>
+                  <span class="cell-value">41.91</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-2">LLaMA-4-Maverick</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 40.68%;"></div>
+                  <span class="cell-value">40.68</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 41.82%;"></div>
+                  <span class="cell-value">41.82</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 30.60%;"></div>
+                  <span class="cell-value">30.60</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 50.47%;"></div>
+                  <span class="cell-value">50.47</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 46.00%;"></div>
+                  <span class="cell-value">46.00</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 30.69%;"></div>
+                  <span class="cell-value">30.69</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 38.38%;"></div>
+                  <span class="cell-value">38.38</span>
+                </td>
+              </tr>
+              <!-- LLMs with thinking -->
+              <tr class="group-3">
+                <td colspan="9" class="has-text-weight-bold" style="text-align: center; vertical-align: middle;">Large Language Models with thinking</td>
+              </tr>
+              <tr>
+                <td class="model-3">QVQ-72B-Preview</td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 30.94%;"></div>
+                  <span class="cell-value">30.94</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 32.09%;"></div>
+                  <span class="cell-value">32.09</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 26.37%;"></div>
+                  <span class="cell-value">26.37</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 38.21%;"></div>
+                  <span class="cell-value">38.21</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 42.00%;"></div>
+                  <span class="cell-value">42.00</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 31.68%;"></div>
+                  <span class="cell-value">31.68</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 32.83%;"></div>
+                  <span class="cell-value">32.83</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-3">Gemini-2.0 Flash</td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 37.63%;"></div>
+                  <span class="cell-value">37.63</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 37.89%;"></div>
+                  <span class="cell-value">37.89</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 35.00%;"></div>
+                  <span class="cell-value">35.00</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 60.38%;"></div>
+                  <span class="cell-value bold-value">60.38*</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 49.50%;"></div>
+                  <span class="cell-value">49.50</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 19.19%;"></div>
+                  <span class="cell-value">19.19</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 30.69%;"></div>
+                  <span class="cell-value">30.69</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 41.41%;"></div>
+                  <span class="cell-value">41.41</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-3">Gemini-2.5 Pro</td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 42.47%;"></div>
+                  <span class="cell-value bold-value">42.47*</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 42.36%;"></div>
+                  <span class="cell-value bold-value">42.36*</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 35.71%;"></div>
+                  <span class="cell-value bold-value">35.71*</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 41.51%;"></div>
+                  <span class="cell-value">41.51*</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 34.50%;"></div>
+                  <span class="cell-value">34.50</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 36.16%;"></div>
+                  <span class="cell-value">36.16*</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 30.69%;"></div>
+                  <span class="cell-value">30.69</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 46.46%;"></div>
+                  <span class="cell-value bold-value">46.46*</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-3">Claude-3.7-sonnet</td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 38.28%;"></div>
+                  <span class="cell-value">38.28</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 37.72%;"></div>
+                  <span class="cell-value">37.72</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 35.71%;"></div>
+                  <span class="cell-value bold-value">35.71*</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 45.75%;"></div>
+                  <span class="cell-value">45.75</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 51.00%;"></div>
+                  <span class="cell-value bold-value">51.00*</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 21.28%;"></div>
+                  <span class="cell-value">21.28</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 43.93%;"></div>
+                  <span class="cell-value">43.93</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="model-3">Dual (GPT-4V + DeepSeek-R1)</td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 41.26%;"></div>
+                  <span class="cell-value">41.26</span>
+                </td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+                <td class="data-cell">-</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <!-- <p class="has-text-centered is-size-7 mt-2">表格显示了不同模型在MMMR数据集上的表现（准确率%）。粗体数字表示各列的最佳结果。带*的模型使用了专门设计的提示。</p> -->
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
+<!-- End Leaderboard -->
 
 
 <!--BibTex citation -->
@@ -291,7 +795,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
