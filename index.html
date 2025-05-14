@@ -57,17 +57,40 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                Guiyao Tie<sup style="color:#00c9a7">1</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://blog.csdn.net/a_123zxy?spm=1011.2124.3001.5343" target="_blank">Xueyang Zhou<sup style="color:#00c9a7">1</sup></a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    Tianhe Gu<sup style="color:#00c9a7">1</sup>,
                   </span>
+                  <span class="author-block">
+                    Ruihang Zhang<sup style="color:#00c9a7">1</sup>,
+                  </span>
+                  <span class="author-block">
+                    Chaoran Hu<sup style="color:#00c9a7">1</sup>,
+                  </span>
+                  <span class="author-block">
+                    Sizhe Zhang<sup style="color:#00c9a7">1</sup>,
+                  </span>
+                  <span class="author-block">
+                    Mengqu Sun<sup style="color: #845ec2;">2</sup>,
+                  </span>
+                  <span class="author-block">
+                    Yan Zhang<sup style="color:#00c9a7">1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=cTpFPJgAAAAJ&hl=en" target="_blank">Pan Zhou<sup style="color:#00c9a7">1</sup></a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://lichao-sun.github.io/" target="_blank">Lichao Sun<sup style="color: #845ec2;">2</sup></a>,
+                  </span>
+                  
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup style="color:#00c9a7">1</sup>Huazhong University of Science and Technology, <sup style="color: #845ec2;">2</sup>Lehigh University<br>
+                      <!-- <br><span style="color: red">NeurIPS 2025 Datasets and Benchmarks Track Submission</span></span> -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -129,12 +152,12 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="./static/images/overview.png" alt="">
-      <h2 class="subtitle has-text-centered">
+      <p class="has-text-centered">
         Comparison of Accuracy Across Different Models and Methods on the MMMR Dataset.
         The bar chart illustrates validation accuracy (in %) for baselines (Heuristic & Expert), MLLMs
         without Thinking (e.g., LLaMA-3.2-11B), and MLLMs with Thinking (e.g., Gemini-2.5 Pro, Dual),
         highlighting performance trends across six task types, with an average accuracy of 38.5% for MLLMs.
-      </h2>
+      </p>
     </div>
   </div>
 </section>
@@ -151,7 +174,26 @@
         </h2>
         <div class="content has-text-justified">
           <p>
-            Recent advancements in Multi-Modal Large Language Models (MLLMs) have driven the development of complex reasoning tasks integrating text, images, and structured data, spanning Logical Reasoning, Mathematical Reasoning, Spatio-Temporal Understanding, Coding, Map Navigation, and Scientific Reasoning. However, the reasoning capabilities of MLLMs, particularly those with Thinking (MLLMs-T), remain underexplored, lacking a standardized evaluation framework. We introduce \MMMR, a novel benchmarking framework designed to evaluate MLLMs-T and MLLMs through a three-stage pipeline: 1) Reasoning Dataset Construction, creating the \MMMR with diverse multi-modal tasks; 2) Thinking Quality Assessment, using metrics like RTQ, RTA, RSC, Acc, TLen, and OA to assess reasoning coherence and alignment; and 3) Insight Synthesis, deriving actionable strategies for improvement. Our evaluation on the \textbf{MMMR} reveals: 1) MLLMs-T outperform MLLMs in multi-modal reasoning, especially in tasks requiring modality integration; 2) Thinking quality assessment identifies prevalent errors like repetitive thinking and overthinking, guiding targeted enhancements; and 3) synthesized insights suggest improvements in reasoning coherence, multi-modal integration, and efficiency, addressing overthinking via optimized Thinking strategies. These findings provide a foundation for advancing MLLMs-T, and we advocate for further research to enhance scalability, robustness, and real-world applicability of multi-modal reasoning systems.
+            Recent advancements in Multi-Modal Large Language Models (MLLMs) have
+            driven the development of complex reasoning tasks integrating text, images, and
+            structured data, spanning Logical Reasoning, Mathematical Reasoning, Spatio-
+            Temporal Understanding, Coding, Map Navigation, and Scientific Reasoning.
+            However, the reasoning capabilities of MLLMs, particularly those with Think-
+            ing (MLLMs-T), remain underexplored, lacking a standardized evaluation frame-
+            work. We introduce MMMR, a novel benchmarking framework designed to evaluate
+            MLLMs-T and MLLMs through a three-stage pipeline: 1) Reasoning Dataset Con-
+            struction, creating the MMMR with diverse multi-modal tasks; 2) Thinking Quality
+            Assessment, using metrics like RTQ, RTA, RSC, Acc, TLen, and OA to assess
+            reasoning coherence and alignment; and 3) Insight Synthesis, deriving actionable
+            strategies for improvement. Our evaluation on the MMMR reveals: 1) MLLMs-
+            T outperform MLLMs in multi-modal reasoning, especially in tasks requiring
+            modality integration; 2) Thinking quality assessment identifies prevalent errors
+            like repetitive thinking and overthinking, guiding targeted enhancements; and 3)
+            synthesized insights suggest improvements in reasoning coherence, multi-modal in-
+            tegration, and efficiency, addressing overthinking via optimized Thinking strategies.
+            These findings provide a foundation for advancing MLLMs-T, and we advocate
+            for further research to enhance scalability, robustness, and real-world applica-
+            bility of multi-modal reasoning systems.
           </p>
         </div>
       </div>
@@ -186,9 +228,9 @@
           </div>
           <div class="has-text-centered" style="margin: 30px 0;">
             <img src="./static/images/data_overview.png" alt="Data Overview" style="max-width: 80%; height: auto;">
-            <h2 class="subtitle has-text-centered">
+            <p class="has-text-centered">
               Dataset Presentation of MMMR, showcasing representative examples of multi-modal reasoning tasks. Each example highlights interleaved inputs, illustrating the dataset's complexity and diversity in evaluating unified reasoning capabilities.
-            </h2>
+            </p>
           </div>
         </div>
       </div>
@@ -197,39 +239,61 @@
         <span style="vertical-align: middle;">Statistics</span>
       </h2>
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+        <div class="item">
         <!-- Your image here -->
         <img src="static/images/data_summary.png" alt=""/>
         <h2 class="subtitle has-text-centered">
           Data Summary.
         </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/comparison.png" alt=""/>
-        <h2 class="subtitle has-text-centered">
-          Comparison of representative multi-modal reasoning datasets. 
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/comparison.png" alt=""/>
+          <h2 class="subtitle has-text-centered">
+            Comparison of representative multi-modal reasoning datasets. 
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/statistics.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+          Statistical overview of MMMRdataset.
         </h2>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/statistics.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Statistical overview of MMMRdataset.
-       </h2>
-     </div>
-     <!-- <div class="item">
-      <!-- Your image here -->
-      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
+      <!-- Image carousel -->
+      <h2 class="title is-3" style="text-align: center;">
+        <br>
+        <span style="vertical-align: middle;">Examples</span>
       </h2>
-    </div> --> 
-  </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/data_summary.png" alt=""/>
+        <h2 class="subtitle has-text-centered">
+          Data Summary.
+        </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/comparison.png" alt=""/>
+          <h2 class="subtitle has-text-centered">
+            Comparison of representative multi-modal reasoning datasets. 
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/statistics.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+          Statistical overview of MMMRdataset.
+        </h2>
+        </div>
+
 </div>
 </div>
 </section>
 <!-- End image carousel -->
+<!-- End dataset -->
 
 <!-- Leaderboard -->
 <section class="hero is-light">
