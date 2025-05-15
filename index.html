@@ -96,7 +96,7 @@
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -104,22 +104,22 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
-                    <!-- Supplementary PDF link -->
+                    <!-- Dataset link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="https://huggingface.co/datasets/csegirl/MMMR" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
+                        🤗
                       </span>
-                      <span>Supplementary</span>
+                      <span>MMMR</span>
                     </a>
                   </span>
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/CsEgir/MLRM-Bench/tree/master" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -129,13 +129,33 @@
                 </span>
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
+                  </a>
+                </span> -->
+              <!-- Leaderboard link -->
+              <span class="link-block">
+                <a href="#Leaderboard"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-trophy"></i>
+                  </span>
+                  <span>Leaderboard</span>
+                </a>
+              </span>
+              <!-- Examples link -->
+              <span class="link-block">
+                <a href="#Examples"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-image"></i>
+                  </span>
+                  <span>Examples</span>
                 </a>
               </span>
             </div>
@@ -264,31 +284,52 @@
       <!-- Image carousel -->
       <h2 class="title is-3" style="text-align: center;">
         <br>
-        <span style="vertical-align: middle;">Examples</span>
+        <span style="vertical-align: middle;" id="Examples">Examples</span>
       </h2>
-      <div id="results-carousel" class="carousel results-carousel">
+      <div id="results-carousel2" class="carousel results-carousel results-carousel2">
         <div class="item">
         <!-- Your image here -->
-        <img src="static/images/data_summary.png" alt=""/>
+        <img src="static/images/logic-1.png" alt=""/>
         <h2 class="subtitle has-text-centered">
-          Data Summary.
+          Logic: Thinking Case
         </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/comparison.png" alt=""/>
+          <img src="static/images/logic-2.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Comparison of representative multi-modal reasoning datasets. 
+            3D Logic: Non-Thinking Case
+        </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/math-1.png" alt=""/>
+          <h2 class="subtitle has-text-centered">
+            Math: Thinking Case
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/statistics.png" alt="MY ALT TEXT"/>
+          <img src="static/images/space-time-1.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-          Statistical overview of MMMRdataset.
+            Space Reasoning: Non-Thinking Case
         </h2>
         </div>
-
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/space-time-2.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Space-Time: Thinking Case
+        </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/science.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Science: Thinking Case
+        </h2>
+        </div>
+     
 </div>
 </div>
 </section>
@@ -301,7 +342,7 @@
     <div class="has-text-centered" style="padding: 20px 0;">
       <h2 class="title is-1">
         <img src="./static/images/leaderboard.png" alt="" style="width: 70px; height: auto; vertical-align: middle; margin-right: 10px; display: inline-block;">
-        <span style="vertical-align: middle;">Leaderboard</span>
+        <span style="vertical-align: middle;" id="Leaderboard">Leaderboard</span>
       </h2>
     </div>
   </div>
@@ -313,19 +354,19 @@
       <div class="column is-10">
         <div class="table-container">
           <table class="table is-bordered is-fullwidth">
-            <thead>
-              <tr>
-                <th>Models</th>
-                <th>Validation (106)</th>
-                <th>Test (1083)</th>
-                <th>Logic (182)</th>
-                <th>Math (212)</th>
-                <th>Space-Time (200)</th>
-                <th>Code (141)</th>
-                <th>Map (150)</th>
-                <th>Science (198)</th>
-              </tr>
-            </thead>
+          <thead>
+            <tr>
+              <th>Models</th>
+              <th>Validation (106)</th>
+              <th>Test (977)</th>
+              <th>Logic (182)</th>
+              <th>Math (212)</th>
+              <th>Space-Time (200)</th>
+              <th>Code (141)</th>
+              <th>Map (150)</th>
+              <th>Science (198)</th>
+            </tr>
+          </thead>
             <tbody>
               <!-- Baselines -->
               <tr class="group-1">
@@ -337,30 +378,33 @@
                   <div class="progress-bar-1" style="width: 22.1%;"></div>
                   <span class="cell-value">22.1</span>
                 </td>
-                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 23.62%;"></div>
+                  <span class="cell-value">23.62</span>
+                </td>
                 <td class="data-cell">
                   <div class="progress-bar-1" style="width: 24.18%;"></div>
                   <span class="cell-value">24.18</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 23.87%;"></div>
-                  <span class="cell-value">23.87</span>
+                  <div class="progress-bar-1" style="width: 24.06%;"></div>
+                  <span class="cell-value">24.06</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 21.65%;"></div>
-                  <span class="cell-value">21.65</span>
+                  <div class="progress-bar-1" style="width: 21.50%;"></div>
+                  <span class="cell-value">21.50</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 25.34%;"></div>
-                  <span class="cell-value">25.34</span>
+                  <div class="progress-bar-1" style="width: 25.53%;"></div>
+                  <span class="cell-value">25.53</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 22.88%;"></div>
-                  <span class="cell-value">22.88</span>
+                  <div class="progress-bar-1" style="width: 22.67%;"></div>
+                  <span class="cell-value">22.67</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 23.72%;"></div>
-                  <span class="cell-value">23.72</span>
+                  <div class="progress-bar-1" style="width: 23.74%;"></div>
+                  <span class="cell-value">23.74</span>
                 </td>
               </tr>
               <tr>
@@ -369,30 +413,33 @@
                   <div class="progress-bar-1" style="width: 26.8%;"></div>
                   <span class="cell-value">26.8</span>
                 </td>
-                <td class="data-cell">-</td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 26.73%;"></div>
-                  <span class="cell-value">26.73</span>
+                  <div class="progress-bar-1" style="width: 26.58%;"></div>
+                  <span class="cell-value">26.58</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 26.35%;"></div>
-                  <span class="cell-value">26.35</span>
+                  <div class="progress-bar-1" style="width: 26.92%;"></div>
+                  <span class="cell-value">26.92</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 24.08%;"></div>
-                  <span class="cell-value">24.08</span>
+                  <div class="progress-bar-1" style="width: 26.42%;"></div>
+                  <span class="cell-value">26.42</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 24.47%;"></div>
-                  <span class="cell-value">24.47</span>
+                  <div class="progress-bar-1" style="width: 24.00%;"></div>
+                  <span class="cell-value">24.00</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 25.27%;"></div>
-                  <span class="cell-value">25.27</span>
+                  <div class="progress-bar-1" style="width: 24.82%;"></div>
+                  <span class="cell-value">24.82</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-1" style="width: 29.84%;"></div>
-                  <span class="cell-value">29.84</span>
+                  <div class="progress-bar-1" style="width: 25.33%;"></div>
+                  <span class="cell-value">25.33</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-1" style="width: 29.80%;"></div>
+                  <span class="cell-value">29.80</span>
                 </td>
               </tr>
               <tr>
@@ -429,31 +476,73 @@
               </tr>
               <tr>
                 <td class="model-2">LLaMA-3.2-11B-Vision-Instruct</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 18.00%;"></div>
-                  <span class="cell-value">18.00</span>
+                  <div class="progress-bar-2" style="width: 24.53%;"></div>
+                  <span class="cell-value">24.53</span>
                 </td>
-                <td class="data-cell">-</td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 18.10%;"></div>
-                  <span class="cell-value">18.10</span>
+                  <div class="progress-bar-2" style="width: 23.92%;"></div>
+                  <span class="cell-value">23.92</span>
                 </td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 18.68%;"></div>
+                  <span class="cell-value">18.68</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 31.13%;"></div>
+                  <span class="cell-value">31.13</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 28.00%;"></div>
+                  <span class="cell-value">28.00</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 13.48%;"></div>
+                  <span class="cell-value">13.48</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 22.67%;"></div>
+                  <span class="cell-value">22.67</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 22.73%;"></div>
+                  <span class="cell-value">22.73</span>
+                </td>
               </tr>
               <tr>
                 <td class="model-2">LLaMA-3.2-90B-Vision-Instruct</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 30.19%;"></div>
+                  <span class="cell-value">30.19</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 27.65%;"></div>
+                  <span class="cell-value">27.65</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 21.43%;"></div>
+                  <span class="cell-value">21.43</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 34.91%;"></div>
+                  <span class="cell-value">34.91</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 35.00%;"></div>
+                  <span class="cell-value">35.00</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 17.73%;"></div>
+                  <span class="cell-value">17.73</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 25.33%;"></div>
+                  <span class="cell-value">25.33</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 21.72%;"></div>
+                  <span class="cell-value">21.72</span>
+                </td>
               </tr>
               <tr>
                 <td class="model-2">Qwen2.5-VL-32B-Instruct</td>
@@ -462,32 +551,32 @@
                   <span class="cell-value">34.86</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 37.36%;"></div>
-                  <span class="cell-value">37.36</span>
+                  <div class="progress-bar-2" style="width: 34.90%;"></div>
+                  <span class="cell-value">34.90</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 25.14%;"></div>
-                  <span class="cell-value">25.14</span>
+                  <div class="progress-bar-2" style="width: 25.27%;"></div>
+                  <span class="cell-value">25.27</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 50.94%;"></div>
-                  <span class="cell-value">50.94</span>
+                  <div class="progress-bar-2" style="width: 45.28%;"></div>
+                  <span class="cell-value">45.28</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 45.00%;"></div>
                   <span class="cell-value">45.00</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 32.97%;"></div>
-                  <span class="cell-value">32.97</span>
+                  <div class="progress-bar-2" style="width: 32.62%;"></div>
+                  <span class="cell-value">32.62</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 41.58%;"></div>
-                  <span class="cell-value">41.58</span>
+                  <div class="progress-bar-2" style="width: 36.67%;"></div>
+                  <span class="cell-value">36.67</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 21.71%;"></div>
-                  <span class="cell-value">21.71</span>
+                  <div class="progress-bar-2" style="width: 21.72%;"></div>
+                  <span class="cell-value">21.72</span>
                 </td>
               </tr>
               <tr>
@@ -497,28 +586,28 @@
                   <span class="cell-value">36.95</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 37.17%;"></div>
-                  <span class="cell-value">37.17</span>
+                  <div class="progress-bar-2" style="width: 37.18%;"></div>
+                  <span class="cell-value">37.18</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 24.04%;"></div>
-                  <span class="cell-value">24.04</span>
+                  <div class="progress-bar-2" style="width: 24.18%;"></div>
+                  <span class="cell-value">24.18</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 52.36%;"></div>
-                  <span class="cell-value">52.36</span>
+                  <div class="progress-bar-2" style="width: 46.70%;"></div>
+                  <span class="cell-value">46.70</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 47.50%;"></div>
                   <span class="cell-value">47.50</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 41.76%;"></div>
-                  <span class="cell-value bold-value">41.76</span>
+                  <div class="progress-bar-2" style="width: 41.84%;"></div>
+                  <span class="cell-value bold-value">41.84</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 42.57%;"></div>
-                  <span class="cell-value">42.57</span>
+                  <div class="progress-bar-2" style="width: 42.67%;"></div>
+                  <span class="cell-value bold-value">42.67</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 31.31%;"></div>
@@ -532,23 +621,29 @@
                   <span class="cell-value">35.13</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 35.54%;"></div>
-                  <span class="cell-value">35.54</span>
+                  <div class="progress-bar-2" style="width: 35.55%;"></div>
+                  <span class="cell-value">35.55</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 24.18%;"></div>
                   <span class="cell-value">24.18</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 54.72%;"></div>
-                  <span class="cell-value">54.72</span>
+                  <div class="progress-bar-2" style="width: 47.17%;"></div>
+                  <span class="cell-value">47.17</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 14.90%;"></div>
-                  <span class="cell-value">14.90</span>
+                  <div class="progress-bar-2" style="width: 46.00%;"></div>
+                  <span class="cell-value">46.00</span>
                 </td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 39.01%;"></div>
+                  <span class="cell-value">39.01</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 35.33%;"></div>
+                  <span class="cell-value">35.33</span>
+                </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 28.28%;"></div>
                   <span class="cell-value">28.28</span>
@@ -565,18 +660,24 @@
                   <span class="cell-value">29.01</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 22.40%;"></div>
-                  <span class="cell-value">22.40</span>
+                  <div class="progress-bar-2" style="width: 22.53%;"></div>
+                  <span class="cell-value">22.53</span>
                 </td>
-                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 42.45%;"></div>
+                  <span class="cell-value">42.45</span>
+                </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 33.50%;"></div>
                   <span class="cell-value">33.50</span>
                 </td>
-                <td class="data-cell">-</td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 26.73%;"></div>
-                  <span class="cell-value">26.73</span>
+                  <div class="progress-bar-2" style="width: 34.75%;"></div>
+                  <span class="cell-value">34.75</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 26.67%;"></div>
+                  <span class="cell-value">26.67</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 27.27%;"></div>
@@ -598,24 +699,24 @@
                   <span class="cell-value">28.57</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 43.40%;"></div>
-                  <span class="cell-value">43.40*</span>
+                  <div class="progress-bar-2" style="width: 37.74%;"></div>
+                  <span class="cell-value">37.74</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 37.00%;"></div>
                   <span class="cell-value">37.00</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 8.08%;"></div>
-                  <span class="cell-value">8.08</span>
+                  <div class="progress-bar-2" style="width: 18.44%;"></div>
+                  <span class="cell-value">18.44</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 24.75%;"></div>
-                  <span class="cell-value">24.75</span>
+                  <div class="progress-bar-2" style="width: 24.67%;"></div>
+                  <span class="cell-value">24.67</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 32.82%;"></div>
-                  <span class="cell-value">32.82</span>
+                  <div class="progress-bar-2" style="width: 32.83%;"></div>
+                  <span class="cell-value">32.83</span>
                 </td>
               </tr>
               <tr>
@@ -628,7 +729,10 @@
                   <div class="progress-bar-2" style="width: 38.05%;"></div>
                   <span class="cell-value">38.05</span>
                 </td>
-                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 28.02%;"></div>
+                  <span class="cell-value">28.02</span>
+                </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 35.85%;"></div>
                   <span class="cell-value">35.85</span>
@@ -638,13 +742,16 @@
                   <span class="cell-value">49.00</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 8.51%;"></div>
-                  <span class="cell-value">8.51</span>
+                  <div class="progress-bar-2" style="width: 28.37%;"></div>
+                  <span class="cell-value">28.37</span>
                 </td>
-                <td class="data-cell">-</td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 41.91%;"></div>
-                  <span class="cell-value">41.91</span>
+                  <div class="progress-bar-2" style="width: 32.00%;"></div>
+                  <span class="cell-value">32.00</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 41.92%;"></div>
+                  <span class="cell-value">41.92</span>
                 </td>
               </tr>
               <tr>
@@ -658,21 +765,24 @@
                   <span class="cell-value">41.82</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 30.60%;"></div>
-                  <span class="cell-value">30.60</span>
+                  <div class="progress-bar-2" style="width: 30.77%;"></div>
+                  <span class="cell-value">30.77</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 50.47%;"></div>
-                  <span class="cell-value">50.47</span>
+                  <div class="progress-bar-2" style="width: 44.81%;"></div>
+                  <span class="cell-value">44.81</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 46.00%;"></div>
                   <span class="cell-value">46.00</span>
                 </td>
-                <td class="data-cell">-</td>
                 <td class="data-cell">
-                  <div class="progress-bar-2" style="width: 30.69%;"></div>
-                  <span class="cell-value">30.69</span>
+                  <div class="progress-bar-2" style="width: 37.59%;"></div>
+                  <span class="cell-value">37.59</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-2" style="width: 30.67%;"></div>
+                  <span class="cell-value">30.67</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-2" style="width: 38.38%;"></div>
@@ -705,10 +815,13 @@
                   <div class="progress-bar-3" style="width: 42.00%;"></div>
                   <span class="cell-value">42.00</span>
                 </td>
-                <td class="data-cell">-</td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 31.68%;"></div>
-                  <span class="cell-value">31.68</span>
+                  <div class="progress-bar-3" style="width: 32.62%;"></div>
+                  <span class="cell-value">32.62</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 31.33%;"></div>
+                  <span class="cell-value">31.33</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 32.83%;"></div>
@@ -726,24 +839,24 @@
                   <span class="cell-value">37.89</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 35.00%;"></div>
-                  <span class="cell-value">35.00</span>
+                  <div class="progress-bar-3" style="width: 35.16%;"></div>
+                  <span class="cell-value">35.16</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 60.38%;"></div>
-                  <span class="cell-value bold-value">60.38*</span>
+                  <div class="progress-bar-3" style="width: 50.47%;"></div>
+                  <span class="cell-value bold-value">50.47</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 49.50%;"></div>
                   <span class="cell-value">49.50</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 19.19%;"></div>
-                  <span class="cell-value">19.19</span>
+                  <div class="progress-bar-3" style="width: 28.37%;"></div>
+                  <span class="cell-value">28.37</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 30.69%;"></div>
-                  <span class="cell-value">30.69</span>
+                  <div class="progress-bar-3" style="width: 30.67%;"></div>
+                  <span class="cell-value">30.67</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 41.41%;"></div>
@@ -753,36 +866,36 @@
               <tr>
                 <td class="model-3">Gemini-2.5 Pro</td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 42.47%;"></div>
-                  <span class="cell-value bold-value">42.47*</span>
+                  <div class="progress-bar-3" style="width: 42.45%;"></div>
+                  <span class="cell-value bold-value">42.45</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 42.36%;"></div>
-                  <span class="cell-value bold-value">42.36*</span>
+                  <span class="cell-value bold-value">42.36</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 35.71%;"></div>
-                  <span class="cell-value bold-value">35.71*</span>
+                  <div class="progress-bar-3" style="width: 39.56%;"></div>
+                  <span class="cell-value bold-value">39.56</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 41.51%;"></div>
-                  <span class="cell-value">41.51*</span>
+                  <span class="cell-value">41.51</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 34.50%;"></div>
-                  <span class="cell-value">34.50</span>
+                  <div class="progress-bar-3" style="width: 44.50%;"></div>
+                  <span class="cell-value">44.50</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 36.16%;"></div>
-                  <span class="cell-value">36.16*</span>
+                  <div class="progress-bar-3" style="width: 36.17%;"></div>
+                  <span class="cell-value">36.17</span>
                 </td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 30.69%;"></div>
-                  <span class="cell-value">30.69</span>
+                  <div class="progress-bar-3" style="width: 37.33%;"></div>
+                  <span class="cell-value">37.33</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 46.46%;"></div>
-                  <span class="cell-value bold-value">46.46*</span>
+                  <span class="cell-value bold-value">46.46</span>
                 </td>
               </tr>
               <tr>
@@ -797,7 +910,7 @@
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 35.71%;"></div>
-                  <span class="cell-value bold-value">35.71*</span>
+                  <span class="cell-value bold-value">35.71</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 45.75%;"></div>
@@ -805,16 +918,54 @@
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 51.00%;"></div>
-                  <span class="cell-value bold-value">51.00*</span>
+                  <span class="cell-value bold-value">51.00</span>
                 </td>
                 <td class="data-cell">
                   <div class="progress-bar-3" style="width: 21.28%;"></div>
                   <span class="cell-value">21.28</span>
                 </td>
-                <td class="data-cell">-</td>
+               <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 34.00%;"></div>
+                  <span class="cell-value">34.00</span>
+                </td>
                 <td class="data-cell">
-                  <div class="progress-bar-3" style="width: 43.93%;"></div>
-                  <span class="cell-value">43.93</span>
+                  <div class="progress-bar-3" style="width: 43.94%;"></div>
+                  <span class="cell-value">43.94</span>
+                </td>
+              </tr>
+               <tr>
+                <td class="model-3">o4-mini</td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 38.64%;"></div>
+                  <span class="cell-value">38.64</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 37.58%;"></div>
+                  <span class="cell-value">37.58</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 34.62%;"></div>
+                  <span class="cell-value">34.62</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 46.23%;"></div>
+                  <span class="cell-value">46.23</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 47.50%;"></div>
+                  <span class="cell-value">47.50</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 19.86%;"></div>
+                  <span class="cell-value">19.86</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 29.33%;"></div>
+                  <span class="cell-value">29.33</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 41.41%;"></div>
+                  <span class="cell-value">41.41</span>
                 </td>
               </tr>
               <tr>
@@ -823,13 +974,34 @@
                   <div class="progress-bar-3" style="width: 41.26%;"></div>
                   <span class="cell-value">41.26</span>
                 </td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
-                <td class="data-cell">-</td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 41.00%;"></div>
+                  <span class="cell-value">41.00</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 35.71%;"></div>
+                  <span class="cell-value">35.71</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 47.64%;"></div>
+                  <span class="cell-value">47.64</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 48.00%;"></div>
+                  <span class="cell-value">48.00</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 22.70%;"></div>
+                  <span class="cell-value">22.70</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 22.67%;"></div>
+                  <span class="cell-value">22.67</span>
+                </td>
+                <td class="data-cell">
+                  <div class="progress-bar-3" style="width: 45.45%;"></div>
+                  <span class="cell-value">45.45</span>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -846,7 +1018,13 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@inproceedings{tie2025mmmr,
+        title={MMMR: Benchmarking Massive Multi-Modal Reasoning Tasks},
+        author={Guiyao Tie and Xueyang Zhou and Tianhe Gu and Ruihang Zhang and Chaoran Hu and Sizhe Zhang and Mengqu Sun and Yan Zhang and Pan Zhou and Lichao Sun},
+        booktitle={Proceedings of the NeurIPS 2025 Datasets and Benchmarks Track},
+        year={2025},
+      }
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
