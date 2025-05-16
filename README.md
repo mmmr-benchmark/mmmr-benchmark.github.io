@@ -1,6 +1,7 @@
-<img src="static/images/MMMR_logo.ico" alt="MMMR Logo" width="40" style="vertical-align: middle;">
-<strong>MMMR: Benchmarking Massive Multi-Modal Reasoning Tasks</strong>
-
+<h1>
+  <img src="static/images/MMMR_logo.ico" alt="MMMR Logo" width="40" style="vertical-align: middle; margin-right: 10px;">
+  <span style="font-size: 2em; vertical-align: middle;">MMMR: Benchmarking Massive Multi-Modal Reasoning Tasks</span>
+</h1>
 
 ## 👨‍💻 Authors
 
