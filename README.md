@@ -1,4 +1,6 @@
-# ![MMMR Logo](static/images/MMMR_logo.ico)MMMR: Benchmarking Massive Multi-Modal Reasoning Tasks
+<img src="static/images/MMMR_logo.ico" alt="MMMR Logo" width="40" style="vertical-align: middle;">
+<strong>MMMR: Benchmarking Massive Multi-Modal Reasoning Tasks</strong>
+
 
 ## 👨‍💻 Authors
 
@@ -18,7 +20,7 @@
 - Map Navigation
 - Scientific Reasoning
 
-Visit the website [here](#) for a detailed overview.
+Visit the website [here](https://mmmr-benchmark.github.io/) for a detailed overview.
 ```
 ## 📦 Project Structure
 
