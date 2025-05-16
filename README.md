@@ -1,6 +1,11 @@
-# MMMR: Benchmarking Massive Multi-Modal Reasoning Tasks
+# ![MMMR Logo](static/images/MMMR_logo.ico)MMMR: Benchmarking Massive Multi-Modal Reasoning Tasks
 
-![MMMR Logo](static/images/MMMR_logo.ico)
+## 👨‍💻 Authors
+
+- Guiyao Tie<sup>1</sup>, Xueyang Zhou<sup>1</sup>, Tianhe Gu<sup>1</sup>, Ruihang Zhang<sup>1</sup>, Chaoran Hu<sup>1</sup>, Sizhe Zhang<sup>1</sup>  
+- Mengqu Sun<sup>2</sup>, Yan Zhang<sup>1</sup>, Pan Zhou<sup>1</sup>, Lichao Sun<sup>2</sup>  
+<sup>1</sup>Huazhong University of Science and Technology  
+<sup>2</sup>Lehigh University
 
 ## 🌟 Introduction
 
@@ -14,7 +19,7 @@
 - Scientific Reasoning
 
 Visit the website [here](#) for a detailed overview.
-
+```
 ## 📦 Project Structure
 
 .
@@ -22,7 +27,7 @@ Visit the website [here](#) for a detailed overview.
 │ ├── css/ # CSS styles (Bulma, FontAwesome, etc.)
 │ ├── images/ # Icons, banners, and visual assets
 ├── index.html # Main webpage
-
+```
 
 ## 🔗 Live Resources
 
@@ -36,11 +41,6 @@ Visit the website [here](#) for a detailed overview.
 - 🧠 Thinking Quality Assessment using RTQ, RTA, RSC, Acc, TLen, and OA
 - 🧩 Insight synthesis to guide model improvement
 
-## 👨‍💻 Authors
 
-- Guiyao Tie<sup>1</sup>, Xueyang Zhou<sup>1</sup>, Tianhe Gu<sup>1</sup>, Ruihang Zhang<sup>1</sup>, Chaoran Hu<sup>1</sup>, Sizhe Zhang<sup>1</sup>  
-- Mengqu Sun<sup>2</sup>, Yan Zhang<sup>1</sup>, Pan Zhou<sup>1</sup>, Lichao Sun<sup>2</sup>  
-<sup>1</sup>Huazhong University of Science and Technology  
-<sup>2</sup>Lehigh University
 
 
